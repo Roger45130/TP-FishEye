@@ -3,7 +3,7 @@ export const Main = (data) => {
         <main class="container">
             ${data.map(photographer => `
                 <div class="user">
-                    <section class="photo__name">
+                    <section class="photo__name" data-id="${photographer.id}">
                         <img src="assets/images/photographers/thumbnails/${photographer.portrait}" 
                              alt="Photographe ${photographer.name}" 
                              class="photo__thumb">

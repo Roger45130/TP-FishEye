@@ -15,5 +15,15 @@ export const getData = async () => {
 
 export const getPhotographers = async () => {
     const data = await getData();
-    return data.photographers; // Correction pour accéder aux photographes
+    return data.photographers; // Accès aux photographes
+};
+
+export const getPhotographerById = async (id) => {
+    const data = await getData();
+    return data.photographers.find((photographer) => photographer.id == id);
+};
+
+export const getMediaByPhotographerId = async (id) => {
+    const data = await getData();
+    return data.media.filter((media) => media.photographerId == id);
 };
